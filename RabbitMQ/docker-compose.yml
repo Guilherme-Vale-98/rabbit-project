@@ -1,8 +1,11 @@
+version: "3.8"
+
 services: 
     rabbitmq:
       image: rabbitmq:3-management
       container_name: rabbitmq
       restart: always
+      hostname: rabbit
       ports:
         - 5672:5672
         - 15672:15672
@@ -11,3 +14,15 @@ services:
       environment:
         - RABBITMQ_DEFAULT_USER=admin
         - RABBITMQ_DEFAULT_PASS=admin
+    rabbitproj:
+      image: gukami98/rabbitproj
+      ports:
+        - 8080:8080
+      depends_on:
+        - rabbitmq
+      environment:
+        - SPRING_APPLICATION_NAME=rabbitproj
+        - SPRING_RABBITMQ_HOST=rabbit
+        - SPRING_RABBITMQ_PORT=5672
+        - SPRING_RABBITMQ_USERNAME=admin
+        - SPRING_RABBITMQ_PASSWORD=admin
