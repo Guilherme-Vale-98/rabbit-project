@@ -1,0 +1,7 @@
+FROM openjdk:17-jdk-slim as build
+
+LABEL maintainer="gui"
+
+COPY /target/movie-theater-producer-0.0.1-SNAPSHOT.jar movie-theater-producer-0.0.1-SNAPSHOT.jar
+
+ENTRYPOINT ["java", "-jar", "/movie-theater-producer-0.0.1-SNAPSHOT.jar"]
