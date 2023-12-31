@@ -21,8 +21,8 @@ services:
       depends_on:
         - rabbitmq
       environment:
-        - SPRING_APPLICATION_NAME=rabbitproj
-        - SPRING_RABBITMQ_HOST=rabbit
-        - SPRING_RABBITMQ_PORT=5672
-        - SPRING_RABBITMQ_USERNAME=admin
-        - SPRING_RABBITMQ_PASSWORD=admin
+        SPRING_APPLICATION_NAME: rabbitproj
+        SPRING_RABBITMQ_HOST: rabbit
+        SPRING_RABBITMQ_PORT: 5672
+        SPRING_RABBITMQ_USERNAME: admin
+        SPRING_RABBITMQ_PASSWORD: admin
