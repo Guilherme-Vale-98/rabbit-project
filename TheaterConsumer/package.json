@@ -1,0 +1,22 @@
+{
+  "name": "theaterconsumer",
+  "version": "1.0.0",
+  "description": "Theater queue consumer",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guilherme-Vale-98/rabbit-project.git"
+  },
+  "author": "gui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guilherme-Vale-98/rabbit-project/issues"
+  },
+  "homepage": "https://github.com/Guilherme-Vale-98/rabbit-project#readme",
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
+}
